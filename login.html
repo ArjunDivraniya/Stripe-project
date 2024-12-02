@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo-container</title>
+    <style>
+        body{
+            background-image: url(download.png);
+
+        }
+        .header{
+            padding-left: 400px;
+            color: white;
+            margin-top: 40px;
+        }
+        .login-container{
+            height: 568px;
+            width: 541px;
+            padding: 48px;
+            background-color: white;
+            border-radius: 10px;
+         margin-left: 650px;
+            margin-top: 50px;
+        }
+        .div
+    {
+        height: 492px;
+        width: 405px;
+
+    }
+    .loginheader{
+        height: 33px;
+        width: 300.73px;
+        color: #3c4257;
+        text-align: center;
+        margin-left: 130px;
+        font-size: 26px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .email{
+        height: 77px;
+        width: 405px;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+#password{
+    height: 30px;
+    border-radius: 30px;
+    width: 405px;
+    padding: 8px 16px;
+    margin-top: 15px;
+}
+#pass{
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    height: 21px;
+    
+}
+
+#email{
+    height: 30px;
+    border-radius: 30px;
+    width: 405px;
+    padding: 8px 16px;
+    margin-top: 15px;
+}
+#name{
+    margin-left: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    height: 21px;
+    
+}
+.checkbox{
+    margin-top: 60px;
+    margin-left: 50px;
+}
+#button{
+height: 
+44px;
+width: 405px;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(78, 78, 148);
+font-weight: 800;
+border-radius: 10px;
+margin-top: 50px;
+margin-left: 55px;
+
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="header">Stripe</h1>
+    <div class="login-container">
+<form id="div">
+    <div class="loginheader">Sign in your accounts</div>
+    <div class="email">
+        <label id="name" for="email">Email</label><br>
+        <input id="email" type="text" placeholder="Enter Your Email">
+    </div>
+    <div class="email">
+        <label id="pass" for="email">Password</label><br>
+        <input id="password" type="password" placeholder="Enter Your Password">
+    </div>
+    <div><input  class="checkbox" type="checkbox">Remember me on this device</div>
+<button id="button">
+    Sign in
+</button>
+</form>
+    </div>
+    <script>
+    document.getElementById('div').addEventListener('submit', function (e) {
+        e.preventDefault(); 
+    
+       
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        
+        const formData = {
+            
+            email: email,
+            password:password
+        };
+    
+      
+        localStorage.setItem('formData', JSON.stringify(formData));
+     alert('Form data saved in local storage!');
+    });
+    </script>
+</body>
+</html>
